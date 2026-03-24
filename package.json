@@ -1,0 +1,40 @@
+{
+  "name": "dct-ytdl",
+  "version": "1.0.0",
+  "description": "A small Node.js YouTube downloader helper that resolves media URLs via a remote conversion service.",
+  "main": "index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": "./index.js",
+    "./cleanurl": "./lib/cleanurl.js",
+    "./mp3": "./lib/mp3.js",
+    "./mp4": "./lib/mp4.js",
+    "./yt2mate": "./lib/yt2mate.js",
+    "./yts": "./lib/yts.js"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "youtube",
+    "youtube-downloader",
+    "ytdl",
+    "download",
+    "nodejs"
+  ],
+  "author": "Hansa Dewmina",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check lib/youtubedl.js && node --check lib/create-fallback-download.js && node --check lib/mp3.js && node --check lib/mp4.js && node --check lib/yt2mate.js && node --check lib/yts.js",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
