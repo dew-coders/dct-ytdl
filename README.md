@@ -1,6 +1,15 @@
-# dct-ytdl
-
-Small Node.js package that takes a YouTube URL and returns a downloadable media URL from a remote conversion service.
+<div align="center">
+  <h1>DCT YTDL</h1>
+  <p>A youtube downloader written in Javascript. Created By Dew Coders Group Of Company</p>
+  
+  [![npm version](https://img.shields.io/npm/v/dct-ytdl.svg)](https://www.npmjs.com/package/dct-ytdl)
+  [![npm downloads](https://img.shields.io/npm/dm/dct-ytdl.svg)](https://www.npmjs.com/package/dct-ytdl)
+  [![License](https://img.shields.io/npm/l/dct-ytdl.svg)](https://github.com/dew-coders/dct-ytdl/blob/main/LICENSE)
+  
+  ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0D1117)
+  ![Youtube](https://img.shields.io/badge/YouTube-F7DF1E?style=for-the-badge&logo=youtube&logoColor=white&labelColor=0D1117)
+  ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white&labelColor=0D1117)
+</div>
 
 ## Install
 
@@ -232,10 +241,3 @@ console.log(cleanYoutubeSearch("  tamil   songs  "));
 - This package depends on a third-party web service and may stop working if that service changes.
 - The package does not download the file itself. It resolves a downloadable URL.
 - Use it only where you have the right to access and download the media.
-
-## Publish
-
-```bash
-npm login
-npm publish --access public
-```
