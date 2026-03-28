@@ -1,7 +1,7 @@
 {
   "name": "dct-ytdl",
-  "version": "1.0.0",
-  "description": "A small Node.js YouTube downloader helper that resolves media URLs via a remote conversion service.",
+  "version": "1.0.1",
+  "description": "A youtube downloader written in Javascript. Created By Dew Coders Group Of Company.",
   "main": "index.js",
   "type": "commonjs",
   "exports": {
