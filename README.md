@@ -49,6 +49,22 @@ async function run() {
 run();
 ```
 
+Dedicated audio helper with a selected format:
+
+```js
+const { mp3 } = require("dct-ytdl");
+
+async function run() {
+  const result = await mp3(
+    "https://youtu.be/a3Ue-LN5B9U?si=iHxGf_4MwNwY5CFw",
+    "wav"
+  );
+  console.log(result);
+}
+
+run();
+```
+
 Dedicated MP4 helper:
 
 ```js
@@ -56,6 +72,22 @@ const { mp4 } = require("dct-ytdl");
 
 async function run() {
   const result = await mp4("https://youtu.be/a3Ue-LN5B9U?si=iHxGf_4MwNwY5CFw");
+  console.log(result);
+}
+
+run();
+```
+
+Dedicated video helper with a selected format:
+
+```js
+const { mp4 } = require("dct-ytdl");
+
+async function run() {
+  const result = await mp4(
+    "https://youtu.be/a3Ue-LN5B9U?si=iHxGf_4MwNwY5CFw",
+    720
+  );
   console.log(result);
 }
 
@@ -147,13 +179,32 @@ You can also import the standalone utility file directly:
 const cleanYoutubeUrl = require("dct-ytdl/cleanurl");
 ```
 
-### `mp3(url)`
+### `mp3(url, format = "mp3")`
 
 Shortcut for:
 
 ```js
-youtubedl(url, "mp3");
+youtubedl(url, format);
 ```
+
+Supported audio formats:
+
+- `mp3`
+- `m4a`
+- `aac`
+- `flac`
+- `opus`
+- `ogg`
+- `wav`
+
+Examples:
+
+```js
+await mp3("https://youtu.be/a3Ue-LN5B9U");
+await mp3("https://youtu.be/a3Ue-LN5B9U", "flac");
+```
+
+If `youtubedl` fails, it automatically falls back to `yt2mate(url, format)` and keeps the same result shape.
 
 You can also import it directly:
 
@@ -161,20 +212,54 @@ You can also import it directly:
 const mp3 = require("dct-ytdl/mp3");
 ```
 
-### `mp4(url)`
+### `SUPPORTED_AUDIO_FORMATS`
+
+```js
+const { SUPPORTED_AUDIO_FORMATS } = require("dct-ytdl");
+console.log(SUPPORTED_AUDIO_FORMATS);
+```
+
+### `mp4(url, format = "mp4")`
 
 Shortcut for:
 
 ```js
-youtubedl(url, "mp4");
+youtubedl(url, format);
 ```
 
-If `youtubedl` fails, it automatically falls back to `yt2mate(url, "mp4")` and keeps the same result shape.
+Supported video formats:
+
+- `mp4`
+- `144`
+- `240`
+- `360`
+- `480`
+- `720`
+- `1080`
+- `1440`
+- `4k`
+
+Examples:
+
+```js
+await mp4("https://youtu.be/a3Ue-LN5B9U");
+await mp4("https://youtu.be/a3Ue-LN5B9U", 720);
+await mp4("https://youtu.be/a3Ue-LN5B9U", "4k");
+```
+
+If `youtubedl` fails, it automatically falls back to `yt2mate(url, format)` and keeps the same result shape.
 
 You can also import it directly:
 
 ```js
 const mp4 = require("dct-ytdl/mp4");
+```
+
+### `SUPPORTED_VIDEO_FORMATS`
+
+```js
+const { SUPPORTED_VIDEO_FORMATS } = require("dct-ytdl");
+console.log(SUPPORTED_VIDEO_FORMATS);
 ```
 
 ### `yts(query)`
