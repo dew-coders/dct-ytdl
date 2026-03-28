@@ -13,5 +13,7 @@ module.exports.yt2mate = yt2mate;
 module.exports.yts = yts;
 module.exports.youtubedl = youtubedl;
 module.exports.SUPPORTED_FORMATS = youtubedl.SUPPORTED_FORMATS;
+module.exports.SUPPORTED_AUDIO_FORMATS = mp3.SUPPORTED_AUDIO_FORMATS;
+module.exports.SUPPORTED_VIDEO_FORMATS = mp4.SUPPORTED_VIDEO_FORMATS;
 module.exports.cleanYoutubeUrl = youtubedl.cleanYoutubeUrl;
 module.exports.cleanYoutubeSearch = yts.cleanYoutubeSearch;
